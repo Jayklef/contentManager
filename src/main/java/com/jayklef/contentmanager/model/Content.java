@@ -1,6 +1,7 @@
 package com.jayklef.contentmanager.model;
 
 import jakarta.validation.constraints.NotEmpty;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
