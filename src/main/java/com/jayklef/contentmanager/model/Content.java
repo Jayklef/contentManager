@@ -1,10 +1,15 @@
 package com.jayklef.contentmanager.model;
 
+import jakarta.validation.constraints.NotEmpty;
+
 import java.time.LocalDateTime;
 
 public record Content(
         Integer id,
+
+        @NotEmpty
         String title,
+        @NotEmpty
         String description,
         Status status,
         Type contentType,
