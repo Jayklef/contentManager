@@ -1,21 +1,28 @@
 package com.jayklef.contentmanager.model;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.executable.ValidateOnExecution;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Entity
+@Table(name = "contents")
+public class Content{
 
-public record Content(
-        Integer id,
-
-        @NotEmpty
-        String title,
-        @NotEmpty
-        String description,
-        Status status,
-        Type contentType,
-        LocalDateTime dateCreated,
-        LocalDateTime dateUpdated,
-        String url
-) {
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        private Integer id;
+        private String title;
+        private String description;
+        private Status status;
+        private Type contentType;
+        private LocalDateTime dateCreated;
+        private LocalDateTime dateUpdated;
+        private String url;
 }
