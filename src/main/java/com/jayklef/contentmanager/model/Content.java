@@ -22,7 +22,7 @@ public class Content{
         private String description;
         private Status status;
         private Type contentType;
+        private String url;
         private LocalDateTime dateCreated;
         private LocalDateTime dateUpdated;
-        private String url;
 }
