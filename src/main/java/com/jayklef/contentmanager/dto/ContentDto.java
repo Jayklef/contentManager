@@ -5,12 +5,11 @@ import com.jayklef.contentmanager.model.Type;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Past;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
 @Data
-public class contentDto {
+public class ContentDto {
     private Integer id;
 
     @NotEmpty(message = "Please enter a title")
